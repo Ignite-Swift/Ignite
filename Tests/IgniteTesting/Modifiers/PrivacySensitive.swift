@@ -19,6 +19,7 @@ struct PrivacySensitiveTests {
         let element = Link("Go Home", target: "/").privacySensitive(encoding)
         let output = element.markupString()
 
+        #expect(output.starts(with: "<a "))
         #expect(output.contains("privacy-sensitive=\"\(encoding.rawValue)\""))
         #expect(output.contains("protected-link"))
     }
