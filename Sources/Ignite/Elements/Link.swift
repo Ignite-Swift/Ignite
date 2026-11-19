@@ -244,7 +244,7 @@ public struct Link: InlineElement, NavigationItem, DropdownItem {
         linkAttributes.append(dataAttributes: .init(name: "encoded-url", value: encodedUrl))
         linkAttributes.append(customAttributes: .init(name: "href", value: "#"))
 
-        return Markup("a\(linkAttributes)>\(displayContent)</a>")
+        return Markup("<a\(linkAttributes)>\(displayContent)</a>")
     }
 
     /// Renders a standard link with the provided URL and content.
